@@ -3,15 +3,12 @@ package tests;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import pages.Data;
 import testingData.TestingData;
 
-/**
- * Created by SJ on 19.01.2017.
- */
+
 
 @RunWith(DataProviderRunner.class)
 public class RegistrationTest extends BaseTest implements TestingData {
@@ -19,14 +16,14 @@ public class RegistrationTest extends BaseTest implements TestingData {
     @Test
     public void verifySuccessRegistration(){
         registrationPage.registerWith(signupSuccess);
-        Assert.assertEquals(LOGIN_SUCCESS_MESSAGE, loginPage.getSuccessMes());
+        registrationPage.positiveTestAssertion(LOGIN_SUCCESS_MESSAGE);
     }
 
     @Test
     @UseDataProvider("registerNegativeCases")
     public void verifyRegistrationNegativeCases(Data data, String warningMessage) {
         registrationPage.registerWith(data);
-        Assert.assertEquals(warningMessage, registrationPage.getWarningMessage());
+        registrationPage.negativeTestAssertion(warningMessage);
     }
 
     @DataProvider

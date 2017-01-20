@@ -1,8 +1,6 @@
 package pages;
 
-/**
- * Created by SJ on 18.01.2017.
- */
+
 public class Data {
     public String email;
     public String password;

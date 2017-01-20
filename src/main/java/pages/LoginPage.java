@@ -4,18 +4,13 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
-import static com.codeborne.selenide.Condition.appears;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-/**
- * Created by SJ on 18.01.2017.
- */
+
 public class LoginPage extends BasePage{
 
-    private SelenideElement loginButton() {
-        return $(By.xpath("//*[@class='auth']"));
-    }
+
 
     private SelenideElement emailField() {
         return $(By.xpath("//*[@type='email']"));
@@ -109,10 +104,6 @@ public class LoginPage extends BasePage{
         submitButton().click();
     }
 
-    public String getSuccessMes(){
-        click(menuButton());
-        loginButton().waitUntil(appears,1000);
-        return loginButton().getText().toUpperCase();
-    }
+
 
 }

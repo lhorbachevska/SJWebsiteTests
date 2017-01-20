@@ -5,15 +5,10 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 
-/**
- * Created by SJ on 19.01.2017.
- */
+
 public class RegistrationPage extends BasePage {
 
 
-    private SelenideElement loginButton() {
-        return $(By.xpath("//*[@class='auth']"));
-    }
 
     private SelenideElement registrationForm() {
         return $(By.xpath("//*[@class='form-link']"));
