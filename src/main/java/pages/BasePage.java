@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.appears;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 
@@ -28,12 +27,12 @@ public class BasePage {
     }
 
     protected void type (String inputText, SelenideElement element){
-        element.waitUntil(visible,5000);
+        element.waitUntil(appears,5000);
         element.setValue(inputText);
     }
 
     protected void click(SelenideElement element){
-        element.waitUntil(visible,10000);
+        element.waitUntil(appears,5000);
         element.click();
     }
 

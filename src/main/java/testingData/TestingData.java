@@ -2,9 +2,7 @@ package testingData;
 
 import pages.Data;
 
-/**
- * Created by SJ on 19.01.2017.
- */
+
 public interface TestingData {
 
     Data loginValidCredentials = new Data("testlhor01@gmail.com","123456");
@@ -37,4 +35,5 @@ public interface TestingData {
     String EMAIL_TO_RESET_PASSWORD ="testlhor02@gmail.com";
     String PASSWORD_TO_RESET = "testlhor2";
     String SEARCH_LETTER_TO_RESET = "in:unread subject: your password reset link ";
+    String LOGOUT_SUCCESS_MESSAGE = "LOGIN";
 }

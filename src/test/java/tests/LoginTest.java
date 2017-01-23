@@ -9,7 +9,6 @@ import pages.Data;
 import testingData.TestingData;
 
 
-
 @RunWith(DataProviderRunner.class)
 
 public class LoginTest extends BaseTest implements TestingData {
@@ -37,9 +36,15 @@ public class LoginTest extends BaseTest implements TestingData {
         };
     }
 
+    @Test
+    public void verifyLogout(){
+        loginPage.loginWith(loginValidCredentials);
+        loginPage.logout();
+        loginPage.positiveTestAssertion(LOGOUT_SUCCESS_MESSAGE);
+    }
 
     @Test
-    public void resetPassword() throws InterruptedException {
+    public void verifyResetPassword() {
         loginPage.openLoginForm();
         loginPage.forgotPassword(EMAIL_TO_RESET_PASSWORD);
         loginPage.openEmailBox(EMAIL_TO_RESET_PASSWORD, PASSWORD_TO_RESET,SEARCH_LETTER_TO_RESET);

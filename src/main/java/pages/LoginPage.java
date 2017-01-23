@@ -3,14 +3,15 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-
+import org.openqa.selenium.WebDriver;
+import static com.codeborne.selenide.Condition.appears;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
 public class LoginPage extends BasePage{
 
-
+    WebDriver driver;
 
     private SelenideElement emailField() {
         return $(By.xpath("//*[@type='email']"));
@@ -56,9 +57,13 @@ public class LoginPage extends BasePage{
         return $(By.xpath("//*//a[contains(text(),'softjourn')]"));
     }
 
+    private SelenideElement emailReset() {
+        return $(By.name("email"));
+    }
     private SelenideElement passwordConfirmResetPasswField(){
         return $(By.xpath("//*[@name='password_confirmation']"));
     }
+
 
     private SelenideElement resetConfirmButton(){
         return $(By.xpath("//*[@id='reset']"));
@@ -80,13 +85,12 @@ public class LoginPage extends BasePage{
         type(searchText,searchFieldEmailBox());
         searchFieldEmailBox().sendKeys(Keys.ENTER);
         click(chooseLetter());
-        String linkToReset = linkToResetPassword().getText();
-        click(linkToResetPassword());
-        open(linkToReset);
+        String url = linkToResetPassword().getText();
+        open(url);
     }
 
     public void resetPassword(String email, String password){
-        type(email,emailField());
+        type(email,emailReset());
         type(password, passwordField());
         type(password,passwordConfirmResetPasswField());
         click(resetConfirmButton());
@@ -104,6 +108,9 @@ public class LoginPage extends BasePage{
         submitButton().click();
     }
 
-
-
+    public void logout(){
+        click(menuButton());
+        loginButton().waitUntil(appears,2000);
+        click(loginButton());
+    }
 }
