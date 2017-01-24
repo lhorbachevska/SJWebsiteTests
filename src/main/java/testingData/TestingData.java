@@ -17,6 +17,8 @@ public interface TestingData {
     String LOGIN_EMPTY_PASSWORD_MESSAGE = "THE PASSWORD SHOULD BE SET";
     String LOGIN_EMPTY_FIELDS_MESSAGE = "THE EMAIL SHOULD BE SET\n" + "THE PASSWORD SHOULD BE SET";
 
+    String LOGOUT_SUCCESS_MESSAGE = "LOGIN";
+
     Data signupEmptyFields = new Data("","","","");
     Data signupEmptyEmailPasswordFields = new Data("test","","","");
     Data signupEmptyPasswordFields = new Data("test","z@z.com","","");
@@ -35,5 +37,61 @@ public interface TestingData {
     String EMAIL_TO_RESET_PASSWORD ="testlhor02@gmail.com";
     String PASSWORD_TO_RESET = "testlhor2";
     String SEARCH_LETTER_TO_RESET = "in:unread subject: your password reset link ";
-    String LOGOUT_SUCCESS_MESSAGE = "LOGIN";
+
+    String LINK_SAAS_SUBMENU = "https://softjourn.com/en/cms/saas";
+    String LINK_ATM_SUBMENU = "https://softjourn.com/en/cms/atm-ua";
+    String LINK_RD_SUBMENU = "https://softjourn.com/en/cms/research-and-development";
+    String LINK_ADM_SUBMENU = "https://softjourn.com/en/cms/Application_Development_&_Maintenance";
+
+    String SAAS_TITLE = "SOFTWARE AS A SERVICE";
+    String ATM_TITLE = "ASSEMBLY & TEAM MANAGEMENT (ATM)";
+    String RD_TITLE = "RESEARCH & DEVELOPMENT";
+    String ADM_TITLE = "APPLICATION DEVELOPMENT & MAINTENANCE";
+
+    String LINK_CONTACT_US = "https://softjourn.com/en/contact-us";
+    String CONTACT_US_TITLE = "CONTACT US";
+
+    String PAGE_LINK_AGILE = "https://softjourn.com/en/article/agile";
+    String PAGE_LINK_ATM = "https://softjourn.com/en/article/atm-ua";
+    String AGILE_TITLE = "AGILE DEVELOPMENT METHODOLOGY";
+
+    String LINK_FOR_STARTUPS_SUBMENU = "https://softjourn.com/en/cms/for-start-ups";
+    String LINK_FOR_SMALL_AND_MEDIUM_ENTERPRISES = "https://softjourn.com/en/cms/for-smes";
+    String LINK_FOR_CEOS = "https://softjourn.com/en/cms/for-ceos";
+
+    String FOR_STARTUPS_TITLE = "FOR START UPS";
+    String FOR_SMALL_AND_MEDIUM_ENTERPRISES_TITLE = "FOR SMALL AND MEDIUM ENTERPRISES";
+    String FOR_CEOS_TITLE = "FOR CHIEF EXECUTIVE OFFICERS";
+
+    String STARTUP_TACIT = "https://softjourn.com/en/project/android-mobile-app-restaurant-orders";
+    String STARTUP_POWWOW = "https://softjourn.com/en/project/java-iOS-PowWow";
+    String STARTUP_SAY_WHAT = "https://softjourn.com/en/project/android-ukraine-saywhat";
+    String STARTUP_PANA = "https://softjourn.com/en/project/zend-php-brightcove_api-online-video-streaming";
+    String STARTUP_PLAY_FITNESS = "https://softjourn.com/en/project/open-source-ukraine-sports-video-solution";
+    String STARTUP_TRULY_SHARE = "https://softjourn.com/en/iphone-mobile-development-trulyshare";
+    String STARTUP_NOCA = "https://softjourn.com/en/project/Glassfish-open_source-Drools-JavaScript";
+    String STARTUP_PLAY_SPORT = "https://softjourn.com/en/project/social-network-development-playsport";
+    String STARTUP_PREFFERED_ENERGY_SERVICES = "https://softjourn.com/en/project/php-MySQL-LAMP-SAAS-Ukraine";
+    String STARTUP_RAZORCOAST = "https://softjourn.com/en/project/facebook-app-development-razorcoast";
+    String STARTUP_RTP_FINANCIALS = "https://softjourn.com/en/project/ajax-php-MySQL-open_source-ukraine";
+    String STARTUP_NUTRITION_SYSTEMS = "https://softjourn.com/en/project/PHP-MYSQL-Facebook";
+
+    String STARTUP_TACIT_TITLE = "TACIT INNOVATIONS - ANDROID APP FOR PROCESSING RESTAURANT ORDERS!";
+    String STARTUP_POWWOW_TITLE = "DELIVERING WINDOWS WEB AND DESKTOP APPS TO A TABLET";
+    String STARTUP_SAY_WHAT_TITLE = "SAYWHAT - ANDROID APP FOR BETTER CALLING EXPERIENCE";
+    String STARTUP_PANA_TITLE = "VIDEO STREAMING DONE EASILY";
+    String STARTUP_PLAY_FITNESS_TITLE = "WORKOUT ONLINE ANYWHERE, ANYTIME";
+    String STARTUP_TRULY_SHARE_TITLE = "SHARE PHOTOS OF PRODUCTS YOU LOVE WITH YOUR FRIENDS";
+    String STARTUP_NOCA_TITLE = "START ACCEPTING PAYMENTS ON WEBSITES IN MINUTES";
+    String STARTUP_PLAY_SPORT_TITLE = "PLAYSPORT – SPORTS SOCIAL COMMUNITY";
+    String STARTUP_PREFFERED_ENERGY_SERVICES_TITLE = "PREFFERED ENERGY (PES) — SOFTWARE AS A SERVICE CONVERSION";
+    String STARTUP_RAZORCOAST_TITLE = "RAZORCOAST FACEBOOK COMPETITION APPLICATION";
+    String STARTUP_RTP_FINANCIALS_TITLE = "RTP FINANCIALS — PAYPARTNERS (ACQUIRED BY TRANSCARD)";
+    String STARTUP_NUTRITION_SYSTEMS_TITLE = "OUR WORK WITH NUTRITION SYSTEMS";
+
+
+
+
+
+
 }
