@@ -10,6 +10,7 @@ import testingData.TestingData;
 
 @RunWith(DataProviderRunner.class)
 public class MenuTest extends BaseTest implements TestingData {
+
     @Test
     @UseDataProvider("developSoftwareSubmenu")
     public void verifyDevelopSoftwareSubmenu(String submenuLink, String pageTitle){
@@ -34,8 +35,24 @@ public class MenuTest extends BaseTest implements TestingData {
 
     @Test
     @UseDataProvider("startupLink")
-    public void verifyLinksForStartupsOnForStartupsSubmenu(String link, String title){
+    public void verifyForStartupsPageLinks(String link, String title){
         menuPage.goToFindSolutionSubmenu(LINK_FOR_STARTUPS_SUBMENU);
+        menuPage.clickOnPageLink(link);
+        menuPage.assertPageTitle(title);
+    }
+
+    @Test
+    @UseDataProvider("smallAndMediumEnterprisesLink")
+    public void verifyForSmallAndMediumEnterprisesPageLinks(String link, String title){
+        menuPage.goToFindSolutionSubmenu(LINK_FOR_SMALL_AND_MEDIUM_ENTERPRISES);
+        menuPage.clickOnPageLink(link);
+        menuPage.assertPageTitle(title);
+    }
+
+    @Test
+    @UseDataProvider("ceosLink")
+    public void verifyForCEOsPageLinks(String link, String title){
+        menuPage.goToFindSolutionSubmenu(LINK_FOR_CEOS);
         menuPage.clickOnPageLink(link);
         menuPage.assertPageTitle(title);
     }
@@ -82,6 +99,26 @@ public class MenuTest extends BaseTest implements TestingData {
                 {STARTUP_RAZORCOAST,STARTUP_RAZORCOAST_TITLE},
                 {STARTUP_RTP_FINANCIALS,STARTUP_RTP_FINANCIALS_TITLE},
                 {STARTUP_NUTRITION_SYSTEMS,STARTUP_NUTRITION_SYSTEMS_TITLE}
+        };
+    }
+
+    @DataProvider
+    public static Object[][] smallAndMediumEnterprisesLink(){
+        return new Object[][]{
+                {IKOBO,IKOBO_TITLE},
+                {MEDICAL_BILLING,MEDICAL_BILLING_TITLE},
+                {NEXERA,NEXERA_TITLE},
+                {EPLY,EPLY_TITLE}
+        };
+    }
+
+    @DataProvider
+    public static Object[][] ceosLink(){
+        return new Object[][]{
+                {VENDINI,VENDINI_TITLE},
+                {VIAMERICAS,VIAMERICAS_TITLE},
+                {SAVING_PATH,SAVING_PATH_TITLE},
+                {STARTUP_PREFFERED_ENERGY_SERVICES,STARTUP_PREFFERED_ENERGY_SERVICES_TITLE}
         };
     }
 
