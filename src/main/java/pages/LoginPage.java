@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import static com.codeborne.selenide.Condition.appears;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 
 public class LoginPage extends BasePage{
@@ -85,8 +86,8 @@ public class LoginPage extends BasePage{
         type(searchText,searchFieldEmailBox());
         searchFieldEmailBox().sendKeys(Keys.ENTER);
         click(chooseLetter());
-        String url = linkToResetPassword().getText();
-        open(url);
+        click(linkToResetPassword());
+        switchTo().window(1);
     }
 
     public void resetPassword(String email, String password){
